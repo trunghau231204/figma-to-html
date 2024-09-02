@@ -52,6 +52,20 @@ a {
   margin-right: auto;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.break-all {
+  word-break: break-all;
+}
 /* =================header */
 .header {
   background-color: #fffcf4;
@@ -313,6 +327,8 @@ a {
 }
 
 .popular .course-item {
+  /* cho 3 item có kích cỡ bằng nhau */
+  flex: 1;
   border: 1px solid #e2dfda;
   background-color: #fff;
   border-radius: 12px;
