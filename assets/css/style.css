@@ -416,15 +416,24 @@ a {
   padding: 96px 0;
 }
 
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
 .feedback .feedback-item {
   display: flex;
-  object-fit: cover;
+  flex-shrink: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: all ease 0.5s;
 }
 
 .feedback-item .avatar {
   width: 72px;
   height: 72px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .feedback-item .member-name {
